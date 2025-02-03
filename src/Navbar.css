@@ -1,0 +1,28 @@
+nav {
+  position: absolute; /* Position it at the top */
+  top: 0;
+  right: 0;
+  padding: 20px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align items side by side */
+}
+
+.nav-links li {
+  margin-left: 20px; /* Space between the links */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black; /* Link color */
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #007BFF; /* Change color on hover */
+}

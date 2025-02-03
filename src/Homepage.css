@@ -1,0 +1,68 @@
+/* HomePage.css */
+.home-container {
+  background: url('https://st3.depositphotos.com/20363444/35577/i/450/depositphotos_355770670-stock-photo-cropped-view-cleaner-rubber-gloves.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.services {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #f4a261;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.services li {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.services li::before {
+  content: '✔';
+  margin-right: 10px;
+  color: #f4a261;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  .services li {
+    font-size: 1.2rem;
+  }
+}
