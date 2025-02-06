@@ -90,7 +90,7 @@ export const api = axios.create({
     After login, users are redirected to the cleaners' page where they can see available cleaners.
     Users can try to book a cleaner (feature coming soon!).
 
-Future Enhancements
+## Future Enhancements
 
     Complete the Booking Flow: Implement the actual booking logic to complete the booking process.
     Cleaner Ratings: Allow users to rate cleaners after their service.
