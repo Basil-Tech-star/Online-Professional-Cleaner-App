@@ -10,7 +10,7 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Align items side by side */
+  display: flex; /* Aligning items side by side */
 }
 
 .nav-links li {
