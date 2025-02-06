@@ -9,6 +9,8 @@ const AuthForm = ({ type }) => {
     location: '',
     password: '',
   });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,6 +20,8 @@ const AuthForm = ({ type }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError('');
     try {
       if (type === 'signup') {
         await api.post('/signup', formData);
@@ -30,9 +34,13 @@ const AuthForm = ({ type }) => {
       }
     } catch (error) {
       console.error(error);
-      alert('Error during authentication');
+      setError('Error during authentication');
+    }
+    finally {
+      setLoading(false);
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -40,7 +48,8 @@ const AuthForm = ({ type }) => {
       <input type="text" name="phone_number" placeholder="Phone Number" onChange={handleChange} required />
       <input type="text" name="location" placeholder="Location" onChange={handleChange} required />
       <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-      <button type="submit">{type === 'signup' ? 'Sign Up' : 'Login'}</button>
+      <button type="submit" disabled={loading}>{type === 'signup' ? 'Sign Up' : 'Login'}</button>
+      {error && <p className='error'>{error}</p>}
     </form>
   );
 };
