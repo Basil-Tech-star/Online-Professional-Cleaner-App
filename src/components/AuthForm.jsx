@@ -36,7 +36,6 @@ const AuthForm = ({ type }) => {
       }
     } catch (error) {
       console.error(error);
-      // Check for specific error response and display a message
       if (error.response && error.response.data) {
         setError(error.response.data.message || 'Error during authentication');
       } else {
